@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update && apt install -y wget gnupg gnupg1 gnupg2 unzip git
+RUN apt update && apt install -y wget gnupg gnupg1 gnupg2 unzip git make build-essential
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && dpkg -i erlang-solutions_2.0_all.deb
 RUN apt update && apt install -y esl-erlang
 RUN mkdir elixir && \
